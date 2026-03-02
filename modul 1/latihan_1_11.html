@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latihan 11 - Iframe dengan List Link</title>
+</head>
+<body>
+    <h1>Heading Dengan H1</h1>
+    
+    <table width="100%" border="1" cellpadding="10">
+        <tr>
+            <!-- Kolom Kiri 20% untuk Link -->
+            <td width="20%" valign="top">
+                <ul>
+                    <li><a href="#h1" onclick="document.getElementById('frameKonten').srcdoc = h1">Halaman H1</a></li>
+                    <li><a href="#h2" onclick="document.getElementById('frameKonten').srcdoc = h2">Halaman H2</a></li>
+                    <li><a href="#h3" onclick="document.getElementById('frameKonten').srcdoc = h3">Halaman H3</a></li>
+                    <li><a href="#h4" onclick="document.getElementById('frameKonten').srcdoc = h4">Halaman H4</a></li>
+                    <li><a href="#h5" onclick="document.getElementById('frameKonten').srcdoc = h5">Halaman H5</a></li>
+                    <li><a href="#h6" onclick="document.getElementById('frameKonten').srcdoc = h6">Halaman H6</a></li>
+                    <li><a href="#h7" onclick="document.getElementById('frameKonten').srcdoc = h7">Halaman H7</a></li>
+                    <li><a href="#h8" onclick="document.getElementById('frameKonten').srcdoc = h8">Halaman H8</a></li>
+                    <li><a href="#h9" onclick="document.getElementById('frameKonten').srcdoc = h9">Halaman H9</a></li>
+                    <li><a href="#h10" onclick="document.getElementById('frameKonten').srcdoc = h10">Halaman H10</a></li>
+                </ul>
+            </td>
+            
+            <!-- Kolom Kanan 70% untuk Iframe -->
+            <td width="70%" height="300">
+                <iframe id="frameKonten" name="konten" width="100%" height="100%"></iframe>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        // Konten untuk setiap heading
+        const h1 = `
+            <!DOCTYPE html>
+            <html>
+            <body>
+                <h1>Heading Dengan H1</h1>
+                
+            </body>
+            </html>
+        `;
+
+        const h2 = `
+            <!DOCTYPE html>
+            <html>
+            <body>
+                <h3>Heading Dengan H2</h2>
+    
+            </body>
+            </html>
+        `;
+
+        const h3 = `
+            <!DOCTYPE html>
+            <html>
+            <body>
+                <h3>Heading Dengan H3</h3>
+            </body>
+            </html>
+        `;
+
+        const h4 = `
+            <!DOCTYPE html>
+            <html>
+            <body>
+                <h4>Heading Dengan H4</h4>
+            </body>
+            </html>
+        `;
+
+        const h5 = `
+            <!DOCTYPE html>
+            <html>
+            <body>
+                <h5>Heading Dengan H5</h5>
+            </body>
+            </html>
+        `;
+
+        const h6 = `
+            <!DOCTYPE html>
+            <html>
+            <body>
+                <h6>Heading Dengan H6</h6>
+            </body>
+            </html>
+        `;
+
+        const h7 = `
+            <!DOCTYPE html>
+            <html>
+            <body>
+                <h7>Heading Dengan H7</h7>
+            </body>
+            </html>
+        `;
+
+        const h8 = `
+            <!DOCTYPE html>
+            <html>
+            <body>
+                <h8>Heading Dengan H8</h8>
+            </body>
+            </html>
+        `;
+
+        const h9 = `
+            <!DOCTYPE html>
+            <html>
+            <body>
+                <h9>Heading Dengan H9</h9>
+            </body>
+            </html>
+        `;
+
+        const h10 = `
+            <!DOCTYPE html>
+            <html>
+            <body>
+                <h10>Heading Dengan H10</h10>
+            </body>
+            </html>
+        `;
+
+        // Tampilkan h2 secara default saat pertama kali dibuka
+        window.onload = function() {
+            document.getElementById('frameKonten').srcdoc = h1;
+        }
+    </script>
+</body>
+</html>
