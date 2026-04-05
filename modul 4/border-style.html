@@ -1,62 +1,35 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Variasi Border Style CSS</title>
+    <title>Border Style</title>
     <style>
-        /* Menambahkan styling dasar untuk halaman */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f6f9;
-            color: #333;
-            padding: 20px;
-        }
+        p.dotted {border-style: dotted;}
+        p.dashed {border-style: dashed;}
+        p.solid {border-style: solid;}
+        p.double {border-style: double;}
+        p.groove {border-style: groove;}
+        p.ridge {border-style: ridge;}
+        p.inset {border-style: inset;}
+        p.outset {border-style: outset;}
+        p.none {border-style: none;}
 
-        /* Styling dasar untuk elemen paragraf */
-        p.kotak {
-            padding: 10px;
-            margin-bottom: 12px;
-            background-color: white;
-            border-width: 5px; /* Ditebalkan agar gaya border lebih jelas */
-            border-color: #2980b9; /* Warna biru */
-        }
-
-        /* Styling dasar untuk elemen span */
-        span.kotak-inline {
-            padding: 5px 10px;
-            background-color: white;
-            border-width: 5px;
-            border-color: #e67e22; /* Warna oranye */
-            display: inline-block; /* Agar padding dan border bekerja maksimal di span */
-            margin-bottom: 10px;
-            margin-right: 5px;
-        }
-
-        /* Class khusus untuk jenis-jenis border */
-        .dotted { border-style: dotted; }
-        .dashed { border-style: dashed; }
-        .solid { border-style: solid; }
-        .double { border-style: double; border-width: 6px; } /* Double butuh ukuran lebih tebal */
-        .groove { border-style: groove; }
-        .ridge { border-style: ridge; }
-        .inset { border-style: inset; }
-        .outset { border-style: outset; }
-        .none { border-style: none; }
+        span.dotted {border-style: dotted;}
+        span.outset {border-style: outset;}
     </style>
 </head>
 <body>
-    <h2>1. Border pada Elemen Block (Paragraf)</h2>
-    <p class="kotak dotted">Border berupa titik-titik (dotted).</p>
-    <p class="kotak dashed">Border berupa garis putus-putus (dashed).</p>
-    <p class="kotak solid">Border berupa garis tegas (solid).</p>
-    <p class="kotak double">Border berupa garis ganda (double).</p>
-    <p class="kotak groove">Border dengan efek ukiran ke dalam (groove).</p>
-    <p class="kotak none">Paragraf ini tidak memiliki border (none).</p>
+    <h2>Macam-macam style border pada paragraf</h2>
+    <p class="dotted">A dotted border.</p>
+    <p class="dashed">A dashed border.</p>
+    <p class="solid">A solid border.</p>
+    <p class="double">A double border.</p>
+    <p class="groove">A groove border.</p>
+    <p class="none">No border.</p>
 
-    <h2>2. Border pada Elemen Inline (Span)</h2>
-    <span class="kotak-inline ridge">Efek bingkai menonjol (ridge).</span>
-    <span class="kotak-inline inset">Efek bingkai tenggelam (inset).</span><br>
-    <span class="kotak-inline dotted">Gaya titik-titik (dotted) pada span.</span>
-    <span class="kotak-inline outset">Efek bingkai timbul (outset).</span>
+    <h2>Macam-macam style border pada paragraf</h2>
+    <span class="ridge">A ridge border (span).</span><br>
+    <span class="inset">An inset border (span).</span><br>
+    <span class="dotted">An dotted border (span).</span><br>
+    <span class="outset">An outset border (span).</span>
 </body>
 </html>
