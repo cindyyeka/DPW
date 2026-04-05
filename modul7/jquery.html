@@ -1,0 +1,18 @@
+<style>
+    .submenu { display: none; background: #eee; list-style: none; }
+</style>
+<ul id="menu">
+    <li><b>Menu Utama (Klik Saya)</b>
+        <ul class="submenu">
+            <li>Sub Menu 1</li>
+            <li>Sub Menu 2</li>
+        </ul>
+    </li>
+</ul>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $("#menu li").click(function(){
+        $(this).children(".submenu").slideToggle();
+    });
+</script>

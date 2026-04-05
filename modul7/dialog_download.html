@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dialog Download</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+
+    <div id="dl-dialog" title="Downloading...">
+        <div id="progressbar"></div>
+    </div>
+
+    <script>
+        $(function() {
+            var progress = 0;
+            var pb = $("#progressbar").progressbar({
+                value: 0
+            });
+
+            $("#dl-dialog").dialog();
+
+            function move() {
+                progress += 5;
+                pb.progressbar("value", progress);
+                
+                if (progress < 100) {
+                    setTimeout(move, 200);
+                } else {
+                    alert("Download Selesai!");
+                }
+            }
+            
+            move();
+        });
+    </script>
+
+</body>
+</html>

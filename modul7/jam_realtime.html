@@ -1,0 +1,7 @@
+<div id="clock"></div>
+<script>
+    setInterval(function() {
+        var skrg = new Date();
+        document.getElementById('clock').innerHTML = skrg.toLocaleTimeString();
+    }, 1000);
+</script>
