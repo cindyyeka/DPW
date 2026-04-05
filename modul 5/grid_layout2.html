@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar Grid Penempatan</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto; 
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        /* Penempatan Spesifik Item */
+        .item1 {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.8);
+
+            grid-column: 1 / 4; /* Membentang dari garis ke-1 hingga ke-4 (melewati 3 kolom) */
+        }
+
+        .item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item1">Item 1 </div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+    </div>
+
+    <div style="margin-top: 20px; font-family: sans-serif;">
+        <p><b>Kesimpulan Grid Placement:</b></p>
+        <ul>
+            <li>Properti <code>grid-column-start</code> dan <code>grid-column-end</code> (shorthand: <code>grid-column</code>) digunakan untuk melebarkan/membentangkan satu elemen melewati beberapa kolom. Nilai <code>1 / 4</code> artinya mulai dari garis pembatas ke-1 hingga garis ke-4.</li>
+            <li>Properti <code>grid-row</code> berfungsi sama, namun untuk membentangkan elemen secara vertikal ke bawah melewati beberapa baris.</li>
+        </ul>
+    </div>
+</body>
+</html>

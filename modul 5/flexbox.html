@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar Flex Box</title>
+    <style>
+        .wadah-flex {
+            background-color: lightblue; 
+            display: flex;
+            
+            flex-flow: row wrap; 
+            
+            justify-content: center; 
+        }
+
+        .wadah-flex > div {
+            background-color: #4CAF50; 
+            margin: 10px;
+            padding: 20px; 
+            font-size: 30px;
+            color: white;
+            text-align: center;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wadah-flex">
+        <div>1</div> <div>2</div> <div>3</div>
+        <div>4</div> <div>5</div> <div>6</div>
+        <div>7</div> <div>8</div> <div>9</div>
+        <div>10</div> <div>11</div> <div>12</div>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <h3>Kesimpulan Uji Coba Flexbox:</h3>
+        <p><b>Skenario 1:</b> Menambahkan background pada <code>.wadah-flex</code> membantu kita melihat batas area dari flex container.</p>
+        <p><b>Skenario 2:</b> Menambahkan style pada anak div (flex item) membuatnya memiliki bentuk (kotak), jarak antar item (margin), dan ruang di dalam kotak (padding).</p>
+        <p><b>Skenario 3 (flex-direction):</b> Menentukan arah susunan item. Jika diisi <code>row</code> item berjejer ke samping, jika <code>column</code> berjejer ke bawah.</p>
+        <p><b>Skenario 4 (flex-wrap):</b> Jika diisi <code>wrap</code>, item akan otomatis turun ke baris baru jika lebar layar/wadah tidak cukup. Jika <code>nowrap</code>, item akan dipaksa menyusut dalam satu baris.</p>
+        <p><b>Skenario 5 (flex-flow):</b> Adalah cara singkat (shorthand) untuk menulis <code>flex-direction</code> dan <code>flex-wrap</code> secara bersamaan (contoh: <code>row wrap</code>).</p>
+        <p><b>Skenario 6 (justify-content):</b> Mengatur perataan item di sumbu utama. <code>center</code> membuatnya di tengah, <code>space-between</code> memberi jarak seimbang di antaranya, dll.</p>
+    </div>
+</body>
+</html>
