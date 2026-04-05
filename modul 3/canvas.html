@@ -1,0 +1,51 @@
+<article>
+            <h1>Canvas HTML5</h1>
+            <p>Elemen canvas digunakan untuk menggambar grafik menggunakan JavaScript. Elemen &lt;canvas&gt; hanya bertindak sebagai wadah.</p>
+            
+            <h3>Draw a Line</h3>
+            <canvas id="cLine" width="200" height="100" style="border:1px solid #000;"></canvas>
+
+            <h3>Draw a Circle</h3>
+            <canvas id="cCircle" width="200" height="100" style="border:1px solid #000;"></canvas>
+
+            <h3>Draw a Text</h3>
+            <canvas id="cText" width="200" height="100" style="border:1px solid #000;"></canvas>
+
+            <h3>Draw a Linear Gradient</h3>
+            <canvas id="cGradient" width="200" height="100" style="border:1px solid #000;"></canvas>
+
+            <h3>Bangun Datar Persegi</h3>
+            <canvas id="cRect" width="200" height="100" style="border:1px solid #000;"></canvas>
+
+            <script>
+                // 1. Line
+                var ctx1 = document.getElementById("cLine").getContext("2d");
+                ctx1.moveTo(0, 0);
+                ctx1.lineTo(200, 100);
+                ctx1.stroke();
+
+                // 2. Circle
+                var ctx2 = document.getElementById("cCircle").getContext("2d");
+                ctx2.beginPath();
+                ctx2.arc(95, 50, 40, 0, 2 * Math.PI);
+                ctx2.stroke();
+
+                // 3. Text
+                var ctx3 = document.getElementById("cText").getContext("2d");
+                ctx3.font = "30px Arial";
+                ctx3.fillText("Hello World", 10, 50);
+
+                // 4. Gradient
+                var ctx4 = document.getElementById("cGradient").getContext("2d");
+                var grd = ctx4.createLinearGradient(0, 0, 200, 0);
+                grd.addColorStop(0, "red");
+                grd.addColorStop(1, "white");
+                ctx4.fillStyle = grd;
+                ctx4.fillRect(10, 10, 150, 80);
+
+                // 5. Persegi (Tugas Tambahan)
+                var ctx5 = document.getElementById("cRect").getContext("2d");
+                ctx5.fillStyle = "blue"; 
+                ctx5.fillRect(50, 25, 100, 50); 
+            </script>
+        </article>

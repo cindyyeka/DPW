@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Halaman Gambar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Cindy Eka Ramadani"> 
+    <meta name="nim" content="253307032">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+        nav {
+            float: left;
+            width: 30%;
+            height: 450px; /* Diperbesar sedikit agar sejajar dengan gambar */
+            background: #ccc;
+            padding: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 450px; /* Diperbesar sedikit agar sejajar dengan gambar */
+        }
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        
+        /* Tambahan CSS untuk mengatur tata letak galeri gambar */
+        .galeri-gambar img {
+            width: 31%; /* Agar muat 3 gambar ke samping */
+            margin: 1%;
+            border-radius: 5px; /* Opsional: agar ujung gambar sedikit melengkung/rapi */
+        }
+
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+            }
+            .galeri-gambar img {
+                width: 48%; /* Menjadi 2 kolom di layar kecil/HP */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>Judul Website</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gambar.html">Gambar</a></li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="audio.html">Audio</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="svg.html">SVG</a></li>
+                <li><a href="canvas.html">Canvas</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h3>Gambar Pemandangan</h3>
+            
+            <div class="galeri-gambar">
+                <img src="pemandangan1.png" alt="Pemandangan 1">
+                <img src="pemandangan2.png" alt="Pemandangan 2">
+                <img src="pemandangan3.png" alt="Pemandangan 3">
+                <img src="pemandangan4.png" alt="Pemandangan 4">
+                <img src="pemandangan5.png" alt="Pemandangan 5">
+                <img src="pemandangan6.png" alt="Pemandangan 6">
+            </div>
+        </article>
+    </section>
+
+    <footer>
+        <p>Copyright &copy; 2026 - Cindy Eka Ramadani (253307032)</p> 
+    </footer>
+
+</body>
+</html>

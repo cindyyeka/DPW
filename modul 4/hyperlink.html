@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hyperlink pada CSS</title>
+    <style>
+        /* Link 1: Berubah warna */
+        a.one:link {color: #ff0000;}
+        a.one:visited {color: #0000ff;}
+        a.one:hover {color: #ffcc00;}
+
+        /* Link 2: Berubah ukuran font */
+        a.two:link {color: #ff0000;}
+        a.two:visited {color: #0000ff;}
+        a.two:hover {font-size: 150%;}
+
+        /* Link 3: Berubah warna background */
+        a.three:link {color: #ff0000;}
+        a.three:visited {color: #0000ff;}
+        a.three:hover {background: #66ff66;}
+
+        /* Link 4: Berubah jenis font */
+        a.four:link {color: #ff0000;}
+        a.four:visited {color: #0000ff;}
+        a.four:hover {font-family: monospace;}
+
+        /* Link 5: Muncul garis bawah */
+        a.five:link {color: #ff0000; text-decoration: none;}
+        a.five:visited {color: #0000ff; text-decoration: none;}
+        a.five:hover {text-decoration: underline;}
+    </style>
+</head>
+<body>
+    <p><b>Mouse over the links and watch them change layout:</b></p>
+    
+    <p><a class="one" href="#">This link changes color</a></p>
+    <p><a class="two" href="#">This link changes font-size</a></p>
+    <p><a class="three" href="#">This link changes background-color</a></p>
+    <p><a class="four" href="#">This link changes font-family</a></p>
+    <p><a class="five" href="#">This link changes text-decoration</a></p>
+
+    <hr>
+    
+    <div style="background-color: #eef9fd; padding: 15px; border-left: 5px solid #2196F3; margin-top: 30px;">
+        <h3>Kesimpulan Pengaturan Hyperlink:</h3>
+        <p>
+            Dalam CSS, tampilan tautan (hyperlink) dapat diatur secara spesifik berdasarkan statusnya menggunakan <i>pseudo-class</i>. Terdapat 4 status utama pada link, yaitu:
+        </p>
+        <ul>
+            <li><code>a:link</code> - mengatur gaya link yang belum pernah dikunjungi atau di-klik.</li>
+            <li><code>a:visited</code> - mengatur gaya link yang sudah pernah dikunjungi oleh pengguna.</li>
+            <li><code>a:hover</code> - mengatur gaya ketika kursor mouse diarahkan ke atas link (efek interaktif).</li>
+            <li><code>a:active</code> - mengatur gaya link tepat pada saat link tersebut sedang di-klik (ditahan).</li>
+        </ul>
+        <p>
+            Pada praktikum ini, kita belajar bahwa efek <code>:hover</code> tidak hanya bisa digunakan untuk mengubah warna teks, tapi juga membesarkan font, memberi background, mengubah jenis huruf, hingga memunculkan garis bawah.
+        </p>
+    </div>
+
+</body>
+</html>

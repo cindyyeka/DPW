@@ -1,28 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <title>Halaman Beranda</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">>
-    <meta name="author" content="Cindy Eka Ramadani">
-    <meta name="nim" content="253307032">
-    <link rel="stylesheet" href="style.css">
-/head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran Mahasiswa Baru</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif; 
+            font-size: 14px;
+            margin: 20px;
+        }
+        fieldset {
+            border: 1px solid #999;
+            padding: 15px;
+            width: 650px;
+            background-color: #fff;
+        }
+        legend {
+            padding: 0 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 5px;
+            vertical-align: top;
+        }
+        .col-label {
+            width: 220px;
+        }
+        input[type="text"], textarea, select {
+            border: 1px solid #a9a9a9;
+            padding: 2px;
+        }
+        textarea {
+            width: 350px;
+            height: 100px;
+            resize: vertical;
+        }
+        .date-select {
+            width: 50px;
+        }
+        .year-select {
+            width: 70px;
+        }
+        .btn {
+            padding: 2px 8px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
 <body>
-    <header>
-        <h2>Judul Website</h2>
-    </header>
 
-    <section>
-        <nav> <a href="index.html">Beranda</a> | 
-            <a href="profil.html">Profil</a> | 
-            <a href="kontak.html">Kontak</a>
-        </nav>
+    <form action="proses.php" method="POST" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Form Pendaftaran Mahasiswa Baru</legend>
+            <table>
+                <tr>
+                    <td class="col-label">Nama Lengkap</td>
+                    <td><input type="text" name="nama_lengkap" size="30"></td>
+                </tr>
+                <tr>
+                    <td>Tempat/Tanggal Lahir</td>
+                    <td>
+                        <input type="text" name="tempat_lahir" size="15"> / 
+                        <select name="tgl_lahir" class="date-select">
+                            <option value="01">1</option>
+                            <option value="02">2</option>
+                            <option value="03">3</option>
+                            </select> - 
+                        <select name="bln_lahir" class="date-select">
+                            <option value="01">1</option>
+                            <option value="02">2</option>
+                            <option value="03">3</option>
+                            </select> - 
+                        <select name="thn_lahir" class="year-select">
+                            <option value="1989">1989</option>
+                            <option value="1990">1990</option>
+                            <option value="1991">1991</option>
+                            <option value="1992">1992</option>
+                            <option value="1993">1993</option>
+                            <option value="1994">1994</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Agama</td>
+                    <td>
+                        <select name="agama">
+                            <option value="">-PILIH-</option>
+                            <option value="Islam">Islam</option>
+                            <option value="Kristen">Kristen</option>
+                            <option value="Katolik">Katolik</option>
+                            <option value="Hindu">Hindu</option>
+                            <option value="Budha">Budha</option>
+                            <option value="Konghucu">Konghucu</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td>
+                        <input type="radio" id="laki" name="jenis_kelamin" value="Laki-laki"> <label for="laki">Laki-laki</label>
+                        <input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan"> <label for="perempuan">Perempuan</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>No. Ijazah SMA/MA</td>
+                    <td><input type="text" name="no_ijazah" size="30"></td>
+                </tr>
+                <tr>
+                    <td>Foto (Ukuran File Maks. 20 KB)</td>
+                    <td><input type="file" name="foto"></td>
+                </tr>
+                <tr>
+                    <td>Nama Ayah</td>
+                    <td><input type="text" name="nama_ayah" size="30"></td>
+                </tr>
+                <tr>
+                    <td>Nama Ibu</td>
+                    <td><input type="text" name="nama_ibu" size="30"></td>
+                </tr>
+                <tr>
+                    <td>Alamat Rumah</td>
+                    <td><textarea name="alamat_rumah"></textarea></td>
+                </tr>
+                <tr>
+                    <td>No. Telp</td>
+                    <td><input type="text" name="no_telp" size="30"></td>
+                </tr>
+                <tr>
+                    <td>Nama Sekolah Asal</td>
+                    <td><input type="text" name="sekolah_asal" size="30"></td>
+                </tr>
+                <tr>
+                    <td>Alamat Sekolah Asal</td>
+                    <td><textarea name="alamat_sekolah"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Jurusan Dipilih</td>
+                    <td>
+                        <select name="jurusan">
+                            <option value="">-PILIH-</option>
+                            <option value="Komputerisasi Akuntansi">Komputerisasi Akuntansi</option>
+                            <option value="Administrasi Bisnis">Administrasi Bisnis</option>
+                            <option value="Teknik Komputer Kontrol">Teknik Komputer Kontrol</option>
+                            <option value="Teknik Listrik">Teknik Listrik</option>
+                            <option value="Mesin Otomotif">Mesin Otomotif</option>
+                            <option value="Perkeretaapian">Perkeretaapian</option>
+                            <option value="Teknologi Informasi">Teknologi Informasi</option>
+                            <option value="Akuntansi">Akuntansi</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tahu informasi ini dari :</td>
+                    <td>
+                        <input type="checkbox" id="koran" name="info_dari[]" value="Koran"> <label for="koran">Koran</label>
+                        <input type="checkbox" id="website" name="info_dari[]" value="Website"> <label for="website">Website</label>
+                        <input type="checkbox" id="televisi" name="info_dari[]" value="Televisi"> <label for="televisi">Televisi</label>
+                        <input type="checkbox" id="radio" name="info_dari[]" value="Radio"> <label for="radio">Radio</label>
+                        <input type="checkbox" id="teman" name="info_dari[]" value="Teman"> <label for="teman">Teman</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="submit" class="btn">DAFTAR</button>
+                        <button type="reset" class="btn">BATAL</button>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
 
-        <article>
-            <h1>Judul Artikel</h1>
-            <p>Tulis kesimpulan hasil ujicoba disini</p>
-        </article>
-    </section>
 </body>
 </html>

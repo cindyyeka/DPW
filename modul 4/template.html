@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studi Kasus - Template Web</title>
+    <style>
+        /* Pengaturan Umum */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 800px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+        }
+
+        /* Header */
+        header {
+            background-color: blue;
+            color: white;
+            padding: 20px;
+        }
+
+        header h1 {
+            color: yellow;
+            margin: 0;
+            font-size: 28px;
+        }
+
+        header p {
+            margin: 5px 0 0 0;
+        }
+
+        /* Layout Utama (Sidebar + Konten) */
+        .main-wrapper {
+            display: flex;
+            padding: 20px;
+            min-height: 300px;
+        }
+
+        /* Sidebar / Menu */
+        nav {
+            width: 200px;
+            border: 2px dashed #999;
+            padding: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            transition: 0.3s;
+        }
+
+        /* Efek Hover sesuai instruksi gambar */
+        nav ul li a:hover {
+            font-weight: bold;
+            color: black;
+        }
+
+        /* Konten Utama */
+        main {
+            flex: 1;
+            text-align: center;
+            padding-left: 20px;
+        }
+
+        .logo {
+            width: 100px; /* Sesuaikan ukuran logo */
+            margin-bottom: 10px;
+        }
+
+        .ti-text {
+            font-weight: bold;
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .pnm-text {
+            font-size: 18px;
+            margin: 5px 0 20px 0;
+        }
+
+        .description {
+            color: red;
+            font-size: 14px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: lightblue;
+            padding: 10px 20px;
+            text-align: right;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Halo CSS !</h1>
+            <p>Ini adalah website CSS saya</p>
+        </header>
+
+        <div class="main-wrapper">
+            <nav>
+                <ul>
+                    <li><a href="#">Menu 1</a></li>
+                    <li><a href="#">Menu 2</a></li>
+                    <li><a href="#">Menu 3</a></li>
+                    <li><a href="#">Menu 4</a></li>
+                    <li><a href="#">Menu 5</a></li>
+                    <li><a href="#">Menu 6</a></li>
+                </ul>
+            </nav>
+
+            <main>
+                <img src="logo ti.png" alt="Logo PNM" class="logo">
+                <p class="ti-text">TI</p>
+                <p class="pnm-text">Politeknik Negeri Madiun</p>
+                
+                <p class="description">
+                    Mewujudkan pendidikan tinggi vokasi dalam bidang Teknologi Informasi dan penerapannya yang berkualitas, inovatif dan berdaya saing Nasional.
+                </p>
+            </main>
+        </div>
+
+        <footer>
+            Cindy Eka Ramadani | 253307032 | <TI-2B>
+        </footer>
+    </div>
+
+</body>
+</html>

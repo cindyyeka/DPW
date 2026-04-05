@@ -1,0 +1,29 @@
+<article>
+            <h1>Global Event Attribute</h1>
+            <p>Atribut form event digunakan untuk merespon interaksi pengguna atau menangani input pada form. Coba arahkan kursor ke tulisan "Mouse Over Me" dibawah ini lalu klik tombolnya dan amati yang terjadi!</p>
+            
+            <h1 id="demo">Mouse Over Me</h1>
+            <button onclick="displayDate()">Klik saya!</button>
+            <p id="demo2"></p>
+
+            <script>
+                // Script untuk efek hover (onmouseover & onmouseout)
+                document.getElementById("demo").onmouseover = function() {mouseOver()};
+                document.getElementById("demo").onmouseout = function() {mouseOut()};
+                
+                function mouseOver() {
+                    document.getElementById("demo").style.color = "red";
+                }
+                function mouseOut() {
+                    document.getElementById("demo").style.color = "black";
+                }
+
+                // Script untuk event onclick memunculkan tanggal
+                function displayDate() {
+                    document.getElementById("demo2").innerHTML = Date();
+                }
+            </script>
+
+            <br><br>
+            <p><b>Kesimpulan:</b> Pada tag H1, terdapat event <code>onmouseover</code> dan <code>onmouseout</code> yang diatur dengan JavaScript untuk mengubah warna teks menjadi merah saat kursor diarahkan, dan kembali hitam saat kursor dijauhkan. Sedangkan pada tombol, terdapat event <code>onclick</code> yang memanggil fungsi untuk menampilkan tanggal dan waktu secara <i>real-time</i>.</p>
+        </article>

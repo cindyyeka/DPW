@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pseudo-class Selectors</title>
+    <style>
+        p {
+            display: none;
+            background-color: darkgray;
+            padding: 20px;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+        div:hover p { /* hover adalah CSS Pseudo Class */
+            display: block;
+        }
+
+        /* Tambahan instruksi: Link berubah warna saat di-hover */
+        a.link-tes {
+            color: blue;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: Arial;
+        }
+        a.link-tes:hover {
+            color: red; /* Berubah menjadi merah saat dihover */
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div> Letakkan kursor disini untuk melihat div element
+        <p>
+            Saya adalah element p. 
+            <br><br>
+            <b>Kesimpulan:</b> Pada latihan ini, elemen paragraf (<code>&lt;p&gt;</code>) awalnya disembunyikan menggunakan properti <code>display: none;</code>. Namun, karena penggunaan pseudo-class <code>:hover</code> pada pemilih <code>div:hover p</code>, gaya tersebut berubah menjadi <code>display: block;</code>. Artinya, elemen ini akan dipaksa muncul hanya ketika kursor mouse sedang berada di atas elemen induknya (<code>&lt;div&gt;</code>).
+        </p>
+    </div>
+    
+    <br><br>
+    
+    <a href="#" class="link-tes">Arahkan kursor ke link ini, warnanya akan berubah!</a>
+</body>
+</html>

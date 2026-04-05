@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Combinator Selector</title>
+    <style>
+        div p { /* no 1 - Descendant Selector */
+            color: red;
+        }
+        div > p { /* no 2 - Child Selector */
+            background-color: yellow;
+        }
+        div + p { /* no 3 - Adjacent Sibling Selector */
+            background-color: darkgray;
+        }
+        div ~ p { /* no 4 - General Sibling Selector */
+            color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>This is a paragraph. <b>Kesimpulan 1 & 2:</b> Paragraf ini terkena selektor (div p) sehingga teksnya merah, dan karena ia anak langsung dari div (div > p), background-nya menjadi kuning.</p>
+        <p>This is a paragraph. <b>Kesimpulan 1 & 2:</b> Sama seperti di atas, ini adalah anak langsung di dalam tag div.</p>
+    </div>
+
+    <p>This is a paragraph. <b>Kesimpulan 3 & 4:</b> Ini adalah paragraf yang posisinya tepat setelah div (div + p) sehingga background-nya darkgray. Karena ia juga berada setelah div di level yang sama (div ~ p), teksnya menjadi cyan.</p>
+    <p>This is a paragraph. <b>Kesimpulan 4:</b> Paragraf ini tidak menempel langsung dengan div, sehingga hanya terkena selektor (div ~ p) yang membuat teksnya berwarna cyan.</p>
+</body>
+</html>
