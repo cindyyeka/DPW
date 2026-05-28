@@ -5,12 +5,15 @@ include "koneksi.php";
 $db = new Database();
 $conn = $db->conn;
 
-$input = $_GET['id'];
+if (isset($_GET['cari'])) {
+    $cari = "%" . $_GET['cari'] . "%";
+    $statement = $conn->prepare("SELECT * FROM t_dosen WHERE namaDosen LIKE ? ORDER BY idDosen ASC");
+    $statement->bind_param("s", $cari);
+} else {
+    $statement = $conn->prepare("SELECT * FROM t_dosen ORDER BY idDosen ASC");
+}
 
-$statement = $conn->prepare("SELECT * FROM t_dosen WHERE idDosen=?");
-$statement->bind_param("i", $input);
 $statement->execute();
-
 $hasil = $statement->get_result();
 
 ?>
@@ -18,23 +21,56 @@ $hasil = $statement->get_result();
 <!DOCTYPE html>
 <html>
 <head>
-    <title>View Dosen OOP</title>
+    <title>Data Dosen OOP</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h2>Data Dosen</h2>
+<h1>Data Dosen OOP</h1>
+
+<div class="menu">
+    <a href="index.php">Menu Utama</a>
+    <a href="inputdosen.php">Input Data</a>
+    <a href="viewmahasiswa.php">Data Mahasiswa</a>
+    <a href="viewmatakuliah.php">Data Matakuliah</a>
+</div>
+
+<div class="search">
+    <form method="get" action="">
+        <input type="text" name="cari" placeholder="Cari nama dosen">
+        <input type="submit" value="Cari">
+        <a href="viewdosen.php">Reset</a>
+    </form>
+</div>
+
+<table>
+<tr>
+    <th>ID</th>
+    <th>Nama Dosen</th>
+    <th>No HP</th>
+    <th>Pilihan</th>
+</tr>
 
 <?php
-
-while ($baris = $hasil->fetch_assoc()) {
-    echo "ID Dosen : " . htmlspecialchars($baris['idDosen']) . "<br>";
-    echo "Nama Dosen : " . htmlspecialchars($baris['namaDosen']) . "<br>";
-    echo "No HP : " . htmlspecialchars($baris['noHP']) . "<br>";
+while ($data = $hasil->fetch_assoc()) {
+    echo "<tr>";
+    echo "<td>" . htmlspecialchars($data['idDosen']) . "</td>";
+    echo "<td>" . htmlspecialchars($data['namaDosen']) . "</td>";
+    echo "<td>" . htmlspecialchars($data['noHP']) . "</td>";
+    echo "<td>
+            <a href='editdosen.php?idDosen=" . $data['idDosen'] . "'>Edit</a> |
+            <a href='hapusdosen.php?idDosen=" . $data['idDosen'] . "' onclick=\"return confirm('Yakin ingin menghapus data?')\">Hapus</a>
+          </td>";
+    echo "</tr>";
 }
-
-$conn->close();
-
 ?>
+
+</table>
 
 </body>
 </html>
+
+<?php
+$statement->close();
+$conn->close();
+?>

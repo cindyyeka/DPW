@@ -13,8 +13,9 @@ include "koneksi.php";
 <h1>Tabel Matakuliah</h1>
 
 <div class="menu">
-    <a href="input_matakuliah.php">Input Data</a> 
-    <a href="viewdosen.php">Data Dosen</a> 
+    <a href="index.php">Menu Utama</a>
+    <a href="input_matakuliah.php">Input Data</a>
+    <a href="viewdosen.php">Data Dosen</a>
     <a href="view_mahasiswa.php">Data Mahasiswa</a>
 </div>
 

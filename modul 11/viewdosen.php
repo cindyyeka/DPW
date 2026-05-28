@@ -13,6 +13,7 @@ include "koneksi.php";
 <h1>Tabel Dosen</h1>
 
 <div class="menu">
+    <a href="index.php">Menu Utama</a>
     <a href="input_dosen.php">Input Data</a>
     <a href="view_mahasiswa.php">Data Mahasiswa</a>
     <a href="view_matakuliah.php">Data Matakuliah</a>
