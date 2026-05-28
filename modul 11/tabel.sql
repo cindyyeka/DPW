@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 26 Bulan Mei 2026 pada 19.55
+-- Waktu pembuatan: 28 Bulan Mei 2026 pada 10.59
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -38,7 +38,7 @@ CREATE TABLE `t_dosen` (
 --
 
 INSERT INTO `t_dosen` (`idDosen`, `namaDosen`, `noHP`) VALUES
-(10, 'Rahmat Dwi Prasetyo', '08123456789'),
+(10, 'Rahmat Dwi Prasetyo', '08123456787'),
 (11, 'HARRY S. KOM', '0856383033');
 
 -- --------------------------------------------------------
@@ -69,6 +69,13 @@ CREATE TABLE `t_mahasiswa` (
   `noHP` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data untuk tabel `t_mahasiswa`
+--
+
+INSERT INTO `t_mahasiswa` (`npm`, `namaMhs`, `prodi`, `alamat`, `noHP`) VALUES
+(253307032, 'Cindy Eka Ramadani', 'Teknologi Informasi', 'Magetan', '083637383647');
+
 -- --------------------------------------------------------
 
 --
@@ -81,6 +88,13 @@ CREATE TABLE `t_matakuliah` (
   `sks` int(11) NOT NULL,
   `jam` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `t_matakuliah`
+--
+
+INSERT INTO `t_matakuliah` (`kodeMK`, `namaMK`, `sks`, `jam`) VALUES
+(101, 'Desain Pemograman Web', 3, 4);
 
 --
 -- Indexes for dumped tables

@@ -2,10 +2,7 @@
 <html>
 <head>
     <title>Input Data Dosen</title>
-    <style>
-        h1 { text-align: center; }
-        .container { width: 400px; margin: auto; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 

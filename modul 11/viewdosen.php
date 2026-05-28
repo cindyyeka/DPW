@@ -6,26 +6,25 @@ include "koneksi.php";
 <html>
 <head>
     <title>Tabel Dosen</title>
-    <style>
-        h1 { text-align: center; }
-        table {
-            width: 80%;
-            margin: auto;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 8px;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <h1>Tabel Dosen</h1>
 
-<center>
-    <a href="input.php">Input Data</a>
-</center>
+<div class="menu">
+    <a href="input_dosen.php">Input Data</a>
+    <a href="view_mahasiswa.php">Data Mahasiswa</a>
+    <a href="view_matakuliah.php">Data Matakuliah</a>
+</div>
+
+<div class="search">
+    <form method="get" action="">
+        <input type="text" name="cari" placeholder="Cari nama dosen">
+        <input type="submit" value="Cari">
+        <a href="viewdosen.php">Reset</a>
+    </form>
+</div>
 
 <br>
 
@@ -38,7 +37,14 @@ include "koneksi.php";
 </tr>
 
 <?php
-$query = "SELECT * FROM t_dosen ORDER BY idDosen ASC";
+
+if (isset($_GET['cari'])) {
+    $cari = $_GET['cari'];
+    $query = "SELECT * FROM t_dosen WHERE namaDosen LIKE '%$cari%' ORDER BY idDosen ASC";
+} else {
+    $query = "SELECT * FROM t_dosen ORDER BY idDosen ASC";
+}
+
 $result = mysqli_query($link, $query);
 
 if (!$result) {
